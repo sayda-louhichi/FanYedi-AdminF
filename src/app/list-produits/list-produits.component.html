@@ -48,7 +48,16 @@
             <h3>Prix</h3>
           </th>
           <th scope="col">
+            <h3>Quantité</h3>
+          </th>
+          <th scope="col">
+            <h3>Catégorie</h3>
+          </th>
+          <th scope="col">
             <h3>Nom artisan</h3>
+          </th>
+          <th scope="col">
+            <h3>Date d'ajout</h3>
           </th>
           <th scope="col">
             <h3></h3>
@@ -60,7 +69,10 @@
           <img class="image" [src]="product.image" width="70" height="70">
           <td>{{product.name}}</td>
           <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+          <td>{{product.category}}</td>
           <td> {{product.ownerName}}</td>
+          <td>{{today | date:'fullDate'}}</td>
           <img src="assets/delete.svg" (click)="delete(product.productId)">
         </tr>
       </tbody>

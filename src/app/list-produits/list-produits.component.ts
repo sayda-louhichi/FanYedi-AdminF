@@ -13,6 +13,7 @@ export class ListProduitsComponent implements OnInit {
   products: Observable<any[]>;
   searchValue: string = "";
   name_filtered_items: Array<any>;
+  today: number = Date.now();
 
 
   constructor(db: AngularFirestore,public firebaseService :FirebaseService) {
