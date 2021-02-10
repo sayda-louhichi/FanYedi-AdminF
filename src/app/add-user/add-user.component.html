@@ -1,0 +1,80 @@
+<div class="row mt-4">
+  <div class="col-12">
+    <h4>User Registration</h4>
+  </div>
+
+  <div class="col-12">
+    <div class="row" *ngIf="authError">
+      <div class="col-12 alert alert-danger">
+        {{ authError?.message }}
+      </div>
+    </div>
+    <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <label for="UserName">Name</label>
+          <input ngModel #UserName="ngModel" name="UserName" type="text" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-2">
+          <label for="UserEmail">Email</label>
+          <input ngModel #UserEmail="ngModel" name="email" type="email" class="form-control">
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <label for="password">Password</label>
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <label>Confirm Password</label>
+            <input name="password" type="password" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <label for="UserNumber">Phone number</label>
+            <input ngModel #UserNumber="ngModel" name="UserNumber" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <label for="UserAdress">Adress</label>
+            <input ngModel #UserAdress="ngModel" name="UserAdress" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!---<p>add-user works!</p>
+<div class="formGroup">
+    <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
+  </div>
+
+  <div class="formGroup">
+    <input type="password" class="formControl" placeholder="Password" #userPwd required>
+  </div>
+ <div class="formGroup">
+    <input type="text" class="formControl" placeholder="Name"  #name required>
+  </div>
+  <div class="formGroup">
+    <input type="text" class="formControl" placeholder="number" #number required>
+  </div>
+  <div class="formGroup">
+    <input type="text" class="formControl" placeholder="adress" #adress required>
+  </div>
+
+  <div class="formGroup">
+    <input type="button" class="btn btnPrimary" value="Sign Up" (click)="authService.SignUp(userEmail.value,userPwd.value)">
+  </div>--->

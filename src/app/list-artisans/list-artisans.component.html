@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+     .thead{
+       background-color: #C90327;
+       color: white;
+     }
+     .table{
+       margin-left: -150px;
+     }
+     .h{
+       margin-left: -135px;
+     }
+     .button {
+     background-color: #000000; 
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: flex;
+     border-radius: 5px;
+     font-size: 16px;
+     margin-left: 550px;
+   }
+   
+   .button:hover {
+     background-color:#ffffff;
+     color:black;
+   }
+     
+
+    </style>  
+  
+<h1 class="h">list-artisans</h1> <br> <br>
+
+    
+<br>
+<div class="container">
+    <table class="table table-striped table-bordered ">
+      <thead class="thead">
+        <tr>
+          <th scope="col"><h3>Image</h3></th>
+          <th scope="col"><h3>Name</h3></th>
+          <th scope="col"><h3>Email</h3></th>
+          <th scope="col"><h3>Phone number</h3></th>
+          <th scope="col"><h3></h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | async ">
+          <img class="image" [src]="user.UserImage" width="70" height="70">
+          <td>{{user.UserName}}</td>
+          <td>{{user.UserEmail}}</td>
+        <td> {{user.UserNumber}}</td>
+       
+          <img src="assets/delete.svg" (click)="delete(user.UserId)" >
+        </tr>
+      </tbody>
+    </table>
+    <button class="button"><a href="ajouter-utilisateur">Add Artisan</a></button> 
+  </div>
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+  

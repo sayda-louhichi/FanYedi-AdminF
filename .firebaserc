@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fannyedi-b1af6": {
+      "hosting": {
+        "FanYedi-Admin": [
+          "fannyedi-b1af6"
+        ]
+      }
+    }
+  }
+}
